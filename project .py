@@ -21,6 +21,6 @@ def getlocation(Node):
 def updatenode(Id, Node):
     db = MySQLdb.connect("localhost","Sri","Sri@1204","sample" )
     cursor = db.cursor()
-    cursor.execute("UPDATE dummy SET parent =Node WHERE id ="+Id)
+    cursor.execute("UPDATE dummy SET parent ="+Node+" WHERE id ="+Id)
     db.close()
     
