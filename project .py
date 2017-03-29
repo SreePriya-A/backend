@@ -8,7 +8,8 @@ def getnode(Id):
     if data>100000000:
       getnode(data)
     else:
-        getlocation(data)
+        loc=getlocation(data)
+        return loc
     db.close()
 def getlocation(Node):
     db = MySQLdb.connect("localhost","Sri","Sri@1204","sample" )
